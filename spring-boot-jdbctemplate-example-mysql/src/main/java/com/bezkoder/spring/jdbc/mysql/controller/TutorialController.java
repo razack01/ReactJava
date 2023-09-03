@@ -31,6 +31,7 @@ public class TutorialController {
         tutorialRepository.findByTitleContaining(title).forEach(tutorials::add);
 
       if (tutorials.isEmpty()) {
+
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
       }
 
